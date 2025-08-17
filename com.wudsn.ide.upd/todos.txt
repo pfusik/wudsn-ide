@@ -1,10 +1,16 @@
-Installer
+AtariWiki
 =========
-https://www.battoexeconverter.com/Advanced-Commands/#Hideself
+Auf https://atariwiki.org/wiki/Wiki.jsp?page=Turbo-BASIC%20XL#section-Turbo-BASIC+XL-Manuals
+Links zum ABBUC Shop korrigieren auf https://abbuc.de/produkt-kategorie/8bit/literatur/
+=> Mail send to cas for using Gollumn instead
 
 WebSite
 =======
+
 Complete: RGBA article, http://localhost:8080/administrator/index.php?option=com_content&view=article&layout=edit&id=23
+Include https://javatari.org?ROM=https://www.wudsn.com/productions/atari2600/beamracer/beamracer.zip
+https://github.com/ppeccin/javatari.js/issues/42, Support selection of file inside a .zip URL
+https://api.pouet.net/ to perform auto-comparison with Pouet.
 
 WUDSN Tools
 =========
@@ -34,6 +40,9 @@ Trac.com
 Auf https://www.stcarchiv.de/?
 Atari ST Demoscreene https://www.facebook.com/groups/58270054320
 https://www.facebook.com/groups/58270054320/posts/10160345040304321/
+Mia Japp
+https://www.facebook.com/groups/58270054320/user/1267254327/
+Friend request sent
 
 LED Tags
 ========
@@ -97,6 +106,7 @@ http://www.atariage.com/forums/topic/201613-altirra-210-released/unread/
 
 .tracecio in XL/XE OS
 bx "pc=$e694 and y>=$80" \".printf \"CIO call failed: status=$%02x\" y ; g"
+bx -n "pc=ciov and db(iccmd+x)=3" \".printf \"AUX2=$%02X\" db(icax2+x)"
 
 bt siov "Dev=$%02X Cmd=$%02X Sector=$%04X >> Buffer $%04X[$%04X] | Result=$%%02X" db(ddevic)+db(dunit)-1 db(dcomnd) dw(daux1) dw(dbuflo) dw(dbytlo) -- y
 
@@ -364,8 +374,7 @@ Run script "com.wudsn.ide.lng/help/create-help-links.bat".
 
 Joomla
 Embed youtube videos:
-<iframe width="336" height="288" src="http://www.youtube.com/embed/ET9DK23e5uQ?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
-<iframe width="420" height="315" src="http://www.youtube.com/embed/ET9DK23e5uQ frameborder=" 0 allowfullscreen></iframe>
+<p><div class="video-wrapper"><iframe src="http://www.youtube.com/embed/???" frameborder="0" allowfullscreen></iframe></div><p>
 
 Eclipse Links:
 ==============
