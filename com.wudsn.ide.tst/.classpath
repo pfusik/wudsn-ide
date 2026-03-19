@@ -12,6 +12,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
-	<classpathentry kind="lib" path="/fpc/fpc-ppcjvm/mp"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
