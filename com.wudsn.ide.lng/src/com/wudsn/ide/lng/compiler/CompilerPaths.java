@@ -93,6 +93,7 @@ public final class CompilerPaths {
 		compilerPaths = new TreeMap<String, CompilerPath>();
 		// See https://github.com/peterdell/wudsn-ide-tools
 		// TODO: Add MERLIN32
+		// TODO Check if 32-bit versions also work on 64-bit Linux
 		add(Language.ASM, "acme", Platform.OS_WIN32, Platform.ARCH_X86_64, "acme.exe");
 		add(Language.ASM, "asm6", Platform.OS_WIN32, Platform.ARCH_X86_64, "asm6.exe");
 		add(Language.ASM, "atasm", Platform.OS_LINUX, Platform.ARCH_X86, "atasm.linux-i386");
