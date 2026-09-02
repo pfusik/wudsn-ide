@@ -93,32 +93,32 @@ public final class CompilerPaths {
 		compilerPaths = new TreeMap<String, CompilerPath>();
 		// See https://github.com/peterdell/wudsn-ide-tools
 		// TODO: Add MERLIN32
-		add(Language.ASM, "acme", Platform.OS_WIN32, Platform.ARCH_X86, "acme.exe");
-		add(Language.ASM, "asm6", Platform.OS_WIN32, Platform.ARCH_X86, "asm6.exe");
+		add(Language.ASM, "acme", Platform.OS_WIN32, Platform.ARCH_X86_64, "acme.exe");
+		add(Language.ASM, "asm6", Platform.OS_WIN32, Platform.ARCH_X86_64, "asm6.exe");
 		add(Language.ASM, "atasm", Platform.OS_LINUX, Platform.ARCH_X86, "atasm.linux-i386");
 		add(Language.ASM, "atasm", Platform.OS_LINUX, Platform.ARCH_X86_64, "atasm.linux-x86-64");
 		add(Language.ASM, "atasm", Platform.OS_MACOSX, Platform.ARCH_X86, "atasm.macos-i386");
 		add(Language.ASM, "atasm", Platform.OS_MACOSX, Platform.ARCH_X86_64, "atasm.macos-x86-64");
 		add(Language.ASM, "atasm", Platform.OS_MACOSX, Platform.ARCH_PPC, "atasm.macos-powerpc");
-		add(Language.ASM, "atasm", Platform.OS_WIN32, Platform.ARCH_X86, "atasm.exe");
+		add(Language.ASM, "atasm", Platform.OS_WIN32, Platform.ARCH_X86_64, "atasm.exe");
 		add(Language.ASM, "dasm", Platform.OS_LINUX, Platform.ARCH_X86, "bin/dasm.linux-i386");
 		add(Language.ASM, "dasm", Platform.OS_LINUX, Platform.ARCH_X86_64, "bin/dasm.linux-x86-64");
 		add(Language.ASM, "dasm", Platform.OS_MACOSX, Platform.ARCH_X86, "bin/dasm.macos-i386");
 		add(Language.ASM, "dasm", Platform.OS_MACOSX, Platform.ARCH_X86_64, "bin/dasm.macos-x86-64");
-		add(Language.ASM, "dasm", Platform.OS_WIN32, Platform.ARCH_X86, "bin/dasm.exe");
-		add(Language.ASM, "kickass", Platform.OS_LINUX, Platform.ARCH_X86, "KickAss.jar");
-		add(Language.ASM, "kickass", Platform.OS_MACOSX, Platform.ARCH_X86, "KickAss.jar");
-		add(Language.ASM, "kickass", Platform.OS_WIN32, Platform.ARCH_X86, "KickAss.jar");
+		add(Language.ASM, "dasm", Platform.OS_WIN32, Platform.ARCH_X86_64, "bin/dasm.exe");
+		add(Language.ASM, "kickass", Platform.OS_LINUX, Platform.ARCH_X86_64, "KickAss.jar");
+		add(Language.ASM, "kickass", Platform.OS_MACOSX, Platform.ARCH_X86_64, "KickAss.jar");
+		add(Language.ASM, "kickass", Platform.OS_WIN32, Platform.ARCH_X86_64, "KickAss.jar");
 		add(Language.ASM, "mads", Platform.OS_LINUX, Platform.ARCH_X86, "mads.linux-x86");
 		add(Language.ASM, "mads", Platform.OS_LINUX, Platform.ARCH_X86_64, "mads.linux-x86-64");
 		add(Language.ASM, "mads", Platform.OS_MACOSX, Platform.ARCH_X86, "mads.macos-i386");
 		add(Language.ASM, "mads", Platform.OS_MACOSX, Platform.ARCH_X86_64, "mads.macos-x86-64");
 		add(Language.ASM, "mads", Platform.OS_MACOSX, Platform.ARCH_PPC, "mads.macos-powerpc");
 		add(Language.ASM, "mads", Platform.OS_WIN32, Platform.ARCH_X86_64, "mads.exe");
-		add(Language.ASM, "tass", Platform.OS_WIN32, Platform.ARCH_X86, "64tass.exe");
+		add(Language.ASM, "tass", Platform.OS_WIN32, Platform.ARCH_X86_64, "64tass.exe");
 		add(Language.ASM, "xasm", Platform.OS_LINUX, Platform.ARCH_X86, "xasm.linux-i386");
 		add(Language.ASM, "xasm", Platform.OS_MACOSX, Platform.ARCH_X86, "xasm.macos-i386");
-		add(Language.ASM, "xasm", Platform.OS_WIN32, Platform.ARCH_X86, "xasm.exe");
+		add(Language.ASM, "xasm", Platform.OS_WIN32, Platform.ARCH_X86_64, "xasm.exe");
 		add(Language.PAS, "mp", Platform.OS_MACOSX, Platform.ARCH_X86_64, "mp.macos-x86-64");
 		add(Language.PAS, "mp", Platform.OS_WIN32, Platform.ARCH_X86_64, "mp.exe");
 	}
