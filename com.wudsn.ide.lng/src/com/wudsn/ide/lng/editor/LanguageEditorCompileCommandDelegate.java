@@ -43,7 +43,6 @@ import com.wudsn.ide.lng.Texts;
 import com.wudsn.ide.lng.preferences.LanguageHardwareCompilerDefinitionPreferences;
 import com.wudsn.ide.lng.runner.RunnerDefinition;
 import com.wudsn.ide.lng.runner.RunnerId;
-import com.wudsn.ide.lng.runner.RunnerPaths.RunnerPath;
 import com.wudsn.ide.lng.runner.RunnerRegistry;
 
 /**

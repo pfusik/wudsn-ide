@@ -18,13 +18,7 @@
  */
 package com.wudsn.ide.lng.pas.editor;
 
-import org.eclipse.core.resources.IProject;
-import org.eclipse.core.resources.IProjectNatureDescriptor;
-import org.eclipse.core.resources.IWorkspace;
-import org.eclipse.core.resources.ResourcesPlugin;
-
 import org.eclipse.jface.text.ITextViewer;
-import org.eclipse.jface.text.contentassist.CompletionProposal;
 import org.eclipse.jface.text.contentassist.ICompletionProposal;
 import org.eclipse.jface.text.contentassist.IContentAssistProcessor;
 import org.eclipse.jface.text.contentassist.IContextInformation;

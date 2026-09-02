@@ -77,7 +77,6 @@ import com.wudsn.ide.lng.preferences.CompilerRunPreferences;
 import com.wudsn.ide.lng.runner.Runner;
 import com.wudsn.ide.lng.runner.RunnerDefinition;
 import com.wudsn.ide.lng.runner.RunnerId;
-import com.wudsn.ide.lng.runner.RunnerPaths.RunnerPath;
 import com.wudsn.ide.lng.symbol.CompilerSymbolsView;
 
 /**
