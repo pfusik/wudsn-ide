@@ -223,27 +223,28 @@ public abstract class LanguageEditor extends TextEditor implements ILanguageEdit
 
 		String actionDefintionId;
 		String actionId;
+		IAction action;
+		
 		actionDefintionId = LanguageEditorActionDefinitionIds.LanguageContentAssistProposal;
 		actionId = Actions.LanguageContentAssistProposal;
-		IAction action = new TextOperationAction(bundle, actionId + ".", this, ISourceViewer.CONTENTASSIST_PROPOSALS);
+		action = new TextOperationAction(bundle, actionId + ".", this, ISourceViewer.CONTENTASSIST_PROPOSALS);
 		action.setActionDefinitionId(actionDefintionId);
 		setAction(actionId, action);
 		markAsStateDependentAction(actionId, true);
 
-		SourceViewer sourceViewer = (SourceViewer) getSourceViewer();
+		// Register toggle comments command.
+		var sourceViewer = (SourceViewer) getSourceViewer();
 		actionDefintionId = LanguageEditorActionDefinitionIds.LanguageEditorToggleCommentCommand;
 		actionId = Actions.LanguageEditorToggleCommentCommand;
 		action = new LanguageEditorToggleCommentAction(bundle, actionId + ".", this, sourceViewer);
-		action.setActionDefinitionId(actionId);
+		action.setActionDefinitionId(actionDefintionId);
 		setAction(actionId, action);
 		markAsStateDependentAction(actionId, true);
 
-		// Register rule double click.
-		ToggleBreakpointAction toggleBreakpointAction;
-		actionDefintionId = LanguageEditorActionDefinitionIds.ToggleBreakpoint;
+		// Register ruler double click.
 		actionId = Actions.RulerDoubleClick;
-		action.setActionDefinitionId(actionId);
-		toggleBreakpointAction = new ToggleBreakpointAction(this, getDocument(), getVerticalRuler());
+		var toggleBreakpointAction = new ToggleBreakpointAction(this, getDocument(),
+				getVerticalRuler());
 		toggleBreakpointAction.setId(actionId);
 		setAction(actionId, toggleBreakpointAction);
 		markAsStateDependentAction(actionId, true);
