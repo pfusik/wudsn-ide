@@ -1,8 +1,15 @@
+WUDSN
+
+MP:
+rmt_play: 
+{$define romoff} // TODO: Does not copy font https://forums.atariage.com/topic/240919-mad-pascal/page/38/#findComment-5623690
+
+
 AtariWiki
 =========
 Auf https://atariwiki.org/wiki/Wiki.jsp?page=Turbo-BASIC%20XL#section-Turbo-BASIC+XL-Manuals
 Links zum ABBUC Shop korrigieren auf https://abbuc.de/produkt-kategorie/8bit/literatur/
-=> Mail send to cas for using Gollumn instead
+
 
 WebSite
 =======
