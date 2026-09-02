@@ -122,7 +122,7 @@ final class VUMeterField extends Field {
 
 		Rectangle clientRectangle = canvas.getClientArea();
 
-		Image image = new Image(canvas.getDisplay(), canvas.getClientArea());
+		Image image = new Image(canvas.getDisplay(), canvas.getClientArea().width, canvas.getClientArea().height);
 		GC imageGC = new GC(image);
 
 		imageGC.setBackground(canvas.getBackground());
