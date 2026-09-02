@@ -4,7 +4,7 @@ Bundle-Name: WUDSN IDE Assemblers Plug-in
 Bundle-SymbolicName: com.wudsn.ide.lng.asm;singleton:=true
 Bundle-Version: 1.7.2.qualifier
 Bundle-Vendor: Peter Dell
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Require-Bundle: com.wudsn.ide.lng,
  org.eclipse.ui.ide
 Bundle-ActivationPolicy: lazy

@@ -12,7 +12,7 @@ Require-Bundle: com.wudsn.ide.lng,
  org.eclipse.ui,
  org.eclipse.ui.editors,
  org.eclipse.ui.genericeditor
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: com.wudsn.ide.pas
 Bundle-Localization: OSGI-INF/l10n/bundle

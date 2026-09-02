@@ -14,7 +14,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.jface.text,
  org.eclipse.help,
  org.eclipse.ui.editors
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Bundle-ActivationPolicy: lazy; exclude:="com.wudsn.ide.tst.contenttypes"
 Automatic-Module-Name: com.wudsn.ide.tst
 Import-Package: org.eclipse.ui.editors.text

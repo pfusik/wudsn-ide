@@ -5,6 +5,6 @@ Bundle-SymbolicName: com.wudsn.ide.lng.run;singleton:=true
 Bundle-Version: 1.7.2.qualifier
 Bundle-Vendor: Peter Dell
 Automatic-Module-Name: com.wudsn.ide.lng.run
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Require-Bundle: com.wudsn.ide.lng
 Bundle-Localization: OSGI-INF/l10n/bundle

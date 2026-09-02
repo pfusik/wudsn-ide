@@ -26,7 +26,7 @@ Require-Bundle: org.eclipse.core.runtime;visibility:=reexport,
  org.eclipse.ui.workbench
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: Peter Dell
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: com.wudsn.ide.lng;
   uses:="org.eclipse.osgi.util,
    org.eclipse.core.runtime,
