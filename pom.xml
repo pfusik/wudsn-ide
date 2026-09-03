@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+
+   <groupId>com.wudsn.ide</groupId>
+   <artifactId>com.wudsn.ide.parent</artifactId>
+   <version>1.7.2-SNAPSHOT</version>
+   <packaging>pom</packaging>
+
+   <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <tycho-version>4.0.10</tycho-version>
+   </properties>
+
+   <modules>
+      <module>com.wudsn.ide.base</module>
+      <module>com.wudsn.ide.dsk</module>
+      <module>com.wudsn.ide.gfx</module>
+      <module>com.wudsn.ide.hex</module>
+      <module>com.wudsn.ide.lng</module>
+      <module>com.wudsn.ide.lng.asm</module>
+      <module>com.wudsn.ide.lng.asm.test</module>
+      <module>com.wudsn.ide.lng.pas</module>
+      <module>com.wudsn.ide.lng.run</module>
+      <module>com.wudsn.ide.snd</module>
+      <module>com.wudsn.ide.tst</module>
+      <module>com.wudsn.ide.base.feature</module>
+      <module>com.wudsn.ide.feature</module>
+   </modules>
+
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.eclipse.tycho</groupId>
+            <artifactId>tycho-maven-plugin</artifactId>
+            <version>${tycho-version}</version>
+            <extensions>true</extensions>
+         </plugin>
+         <plugin>
+            <groupId>org.eclipse.tycho</groupId>
+            <artifactId>target-platform-configuration</artifactId>
+            <version>${tycho-version}</version>
+            <configuration>
+               <target>
+                  <file>${maven.multiModuleProjectDirectory}/wudsn-ide.target</file>
+               </target>
+               <environments>
+                  <environment>
+                     <os>win32</os>
+                     <ws>win32</ws>
+                     <arch>x86_64</arch>
+                  </environment>
+               </environments>
+            </configuration>
+         </plugin>
+         <plugin>
+            <groupId>org.eclipse.tycho</groupId>
+            <artifactId>tycho-compiler-plugin</artifactId>
+            <version>${tycho-version}</version>
+            <configuration>
+               <release>21</release>
+            </configuration>
+         </plugin>
+      </plugins>
+   </build>
+</project>

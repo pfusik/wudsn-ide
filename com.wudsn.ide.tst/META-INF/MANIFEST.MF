@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Peter Dell
 Bundle-SymbolicName: com.wudsn.ide.tst;singleton:=true
-Bundle-Version: 1.0.0
+Bundle-Version: 1.7.2.qualifier
 Bundle-Activator: com.wudsn.ide.tst.Activator
 Bundle-Vendor: WUDSN IDE Test Plugin
 Require-Bundle: org.eclipse.ui,
