@@ -22,41 +22,36 @@ package com.wudsn.ide.lng.editor;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
-import org.eclipse.core.runtime.CoreException;
-import org.eclipse.jface.text.ITextSelection;
-import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.debug.ui.actions.RulerToggleBreakpointActionDelegate;
+import org.eclipse.jface.action.Action;
+import org.eclipse.ui.IEditorActionDelegate;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.handlers.HandlerUtil;
 
-import com.wudsn.ide.lng.breakpoint.LanguageBreakpointsTarget;
-
 /**
- * Event handler for command "org.eclipse.debug.ui.commands.ToggleBreakpoint" when it is invoked from the
- * text editor context menu or its keyboard shortcut. Both act on the current caret line, unlike the ruler
- * context menu, which needs the ruler's clicked line and is served by
- * {@link LanguageEditorRulerToggleBreakpointCommandHandler} instead.
+ * Event handler for the ruler context menu "Toggle Breakpoint" command. Unlike
+ * {@link LanguageEditorToggleBreakpointCommandHandler} (used for the text editor context menu and the
+ * keyboard shortcut, both of which act on the current caret line), this handler drives
+ * {@link RulerToggleBreakpointActionDelegate} directly, which determines the target line from the ruler's
+ * last mouse position, so toggling a breakpoint from the ruler context menu affects the line that was
+ * actually clicked, regardless of where the caret currently is.
  *
  * @author Peter Dell
  */
-public final class LanguageEditorToggleBreakpointCommandHandler extends AbstractHandler {
+public final class LanguageEditorRulerToggleBreakpointCommandHandler extends AbstractHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		IEditorPart editor = HandlerUtil.getActiveEditor(event);
-		if (!(editor instanceof ILanguageEditor)) {
+		if (editor == null) {
 			return null;
 		}
 
-		ISelection selection = HandlerUtil.getCurrentSelection(event);
-		if (!(selection instanceof ITextSelection)) {
-			return null;
-		}
-
-		try {
-			new LanguageBreakpointsTarget().toggleLineBreakpoints(editor, selection);
-		} catch (CoreException ex) {
-			throw new ExecutionException("Cannot toggle breakpoint.", ex);
-		}
+		IEditorActionDelegate delegate = new RulerToggleBreakpointActionDelegate();
+		Action action = new Action() {
+		};
+		delegate.setActiveEditor(action, editor);
+		delegate.run(action);
 		return null;
 	}
 }

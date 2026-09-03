@@ -97,6 +97,11 @@
             id="com.wudsn.ide.lng.editor.LanguageEditorEnableDisableBreakpointCommand"
             name="%com.wudsn.ide.lng.editor.LanguageEditorEnableDisableBreakpointCommand.name">
       </command>
+      <command
+            categoryId="com.wudsn.ide.lng.editor.LanguageEditorCommands"
+            id="com.wudsn.ide.lng.editor.LanguageEditorRulerToggleBreakpointCommand"
+            name="%com.wudsn.ide.lng.editor.LanguageEditorToggleBreakpointCommand.name">
+      </command>
    </extension>
    <extension
          point="org.eclipse.ui.handlers">
@@ -202,6 +207,18 @@
       <handler
             class="com.wudsn.ide.lng.editor.LanguageEditorToggleBreakpointCommandHandler"
             commandId="org.eclipse.debug.ui.commands.ToggleBreakpoint">
+         <activeWhen>
+            <with
+                  variable="activeEditor">
+               <instanceof
+                     value="com.wudsn.ide.lng.editor.ILanguageEditor">
+               </instanceof>
+            </with>
+         </activeWhen>
+      </handler>
+      <handler
+            class="com.wudsn.ide.lng.editor.LanguageEditorRulerToggleBreakpointCommandHandler"
+            commandId="com.wudsn.ide.lng.editor.LanguageEditorRulerToggleBreakpointCommand">
          <activeWhen>
             <with
                   variable="activeEditor">
@@ -348,8 +365,8 @@
       <menuContribution
             locationURI="popup:#TextRulerContext?after=additions">
          <command
-               commandId="org.eclipse.debug.ui.commands.ToggleBreakpoint"
-               id="org.eclipse.debug.ui.commands.ToggleBreakpoint"
+               commandId="com.wudsn.ide.lng.editor.LanguageEditorRulerToggleBreakpointCommand"
+               id="com.wudsn.ide.lng.editor.LanguageEditorRulerToggleBreakpointCommand"
                style="push">
          </command>
          <command
